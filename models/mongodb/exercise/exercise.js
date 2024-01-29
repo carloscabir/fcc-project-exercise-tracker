@@ -1,3 +1,3 @@
-export class ExerciseModel { 
-  
+export class ExerciseModel {
+
 }

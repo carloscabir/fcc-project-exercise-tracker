@@ -17,6 +17,11 @@ POST /users
 {
   username: string
 }
+=> 
+ {
+  username: string
+  id: ID
+ }
 
 - Create Exercise
 POST /users/:id/exercises
@@ -26,6 +31,26 @@ POST /users/:id/exercises
   title: string
   date: string
 }
+=>
+  {
+    username: string,
+    description: string,
+    duration: 60,
+    date: "Mon Jan 01 1990",
+    _id: "5fb5853f734231456ccb3b05"
+  }
+
 
 - Get User's exercises
 GET /users/:id/log?from="DD/MM/YYYY"&to="DD/MM/YYYY"
+=>
+  {
+    username: "fcc_test",
+    count: 1,
+    _id: "5fb5853f734231456ccb3b05",
+    log: [{
+      description: "test",
+      duration: 60,
+      date: "Mon Jan 01 1990",
+    }]
+  }

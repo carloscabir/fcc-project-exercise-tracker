@@ -4,5 +4,8 @@ export const USER_SCHEMA = new mongoose.Schema({
   username: {
     type: String,
     required: true
+  },
+  exercises: {
+    type: Array
   }
 })

@@ -1,8 +1,9 @@
-import mongoose from "mongoose"
+import mongoose from 'mongoose'
+import 'dotenv/config'
 
 export const dbClient = async () => {
   mongoose.connect(process.env.MONGO_URI)
-    .then(m => { 
+    .then(m => {
       console.log(`Conected to ${m.connection.name} database`)
       return m.connection.getClient()
     })

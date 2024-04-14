@@ -10,12 +10,13 @@ export const createUsersRouter = ({ models }) => {
   const usersController = new UserController({ userModel })
   const exercisesController = new ExerciseController({ exerciseModel })
 
-  // Add POST action to userContrller class
-  usersRouter.post('/', usersController.addUser)
+  usersRouter.get('/', usersController.getAll)
 
-  usersRouter.get('/:id/log', usersController.getUserLogs)
+  usersRouter.post('/', usersController.create)
 
-  usersRouter.post('/:id/exercises', exercisesController.addExercise)
+  usersRouter.get('/:id/logs', usersController.getUserLogs)
+
+  usersRouter.post('/:id/exercises', exercisesController.create)
 
   return usersRouter
 }

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server-with-mongodb.js",
-    "dev": "node --watch index.js"
+    "dev": "nodemon server-with-mongodb.js"
   },
   "dependencies": {
     "cors": "2.8.5",
